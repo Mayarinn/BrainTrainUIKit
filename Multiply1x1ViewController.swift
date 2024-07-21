@@ -42,6 +42,7 @@ class Multiply1x1ViewController: UIViewController {
         checkButton.setTitle("Check", for: .normal)
         checkButton.layer.cornerRadius = 7
         checkButton.backgroundColor = .systemPurple
+        checkButton.setTitleColor(.systemPink, for: .highlighted)
         checkButton.addTarget(self, action: #selector(checkAnswerButtonClicked), for: .touchUpInside)
         
         checkButton.translatesAutoresizingMaskIntoConstraints = false
