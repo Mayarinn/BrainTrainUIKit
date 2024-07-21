@@ -9,6 +9,8 @@ import UIKit
 
 class Multiply1x1ViewController: UIViewController {
     
+//MARK: - variables
+    
     var titleLabel: UILabel = {
         var titleLabel = UILabel()
         titleLabel.text = "Text"
@@ -17,6 +19,8 @@ class Multiply1x1ViewController: UIViewController {
         return titleLabel
     }()
 
+//MARK: - functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
