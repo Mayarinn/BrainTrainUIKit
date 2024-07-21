@@ -58,7 +58,9 @@ class Multiply1x1ViewController: UIViewController {
             titleLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 75),
             
             taskLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
-                        taskLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50)
+            taskLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
+            taskLabel.widthAnchor.constraint(equalTo: answerTextfield.widthAnchor),
+            taskLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 
