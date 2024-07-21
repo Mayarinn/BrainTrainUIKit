@@ -21,7 +21,6 @@ class Multiply1x1ViewController: UIViewController {
     
     var taskLabel: UILabel = {
         var taskLabel = UILabel()
-        taskLabel.text = "Task"
         taskLabel.textAlignment = .right
         taskLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -42,6 +41,9 @@ class Multiply1x1ViewController: UIViewController {
         checkButton.setTitle("Check", for: .normal)
         checkButton.layer.cornerRadius = 7
         checkButton.backgroundColor = .systemPurple
+        checkButton.setTitleColor(.systemPink, for: .highlighted)
+        checkButton.addTarget(self, action: #selector(checkAnswerButtonClicked), for: .touchUpInside)
+        
         checkButton.translatesAutoresizingMaskIntoConstraints = false
             
         return checkButton
@@ -52,8 +54,13 @@ class Multiply1x1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
+    }
+    
+    func randomTask() -> String {
+        return "5x7"
     }
     
     func addSubviews() {
@@ -83,6 +90,10 @@ class Multiply1x1ViewController: UIViewController {
             checkButton.widthAnchor.constraint(equalToConstant: 85),
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
+    }
+    
+    @objc func checkAnswerButtonClicked(_ sender: UIButton) {
+        print("Hello")
     }
 
 
