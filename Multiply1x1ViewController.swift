@@ -21,7 +21,6 @@ class Multiply1x1ViewController: UIViewController {
     
     var taskLabel: UILabel = {
         var taskLabel = UILabel()
-        taskLabel.text = "Task"
         taskLabel.textAlignment = .right
         taskLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -55,8 +54,13 @@ class Multiply1x1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
+    }
+    
+    func randomTask() -> String {
+        return "5x7"
     }
     
     func addSubviews() {
