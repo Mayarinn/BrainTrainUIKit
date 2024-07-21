@@ -21,10 +21,18 @@ class Multiply1x1ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         addSubviews()
+        setConstraints()
     }
     
     func addSubviews() {
         view.addSubview(titleLabel)
+    }
+    
+    func setConstraints() {
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 75)
+        ])
     }
 
 
