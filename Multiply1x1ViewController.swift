@@ -36,6 +36,16 @@ class Multiply1x1ViewController: UIViewController {
         
         return answerTextfield
     }()
+    
+    var checkButton: UIButton = {
+        var checkButton = UIButton()
+        checkButton.setTitle("Check", for: .normal)
+        checkButton.layer.cornerRadius = 7
+        checkButton.backgroundColor = .systemPurple
+        checkButton.translatesAutoresizingMaskIntoConstraints = false
+            
+        return checkButton
+    }()
 
 //MARK: - functions
     
