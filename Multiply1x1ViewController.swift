@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Multiply1x1ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
