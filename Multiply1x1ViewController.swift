@@ -18,6 +18,15 @@ class Multiply1x1ViewController: UIViewController {
         
         return titleLabel
     }()
+    
+    var taskLabel: UILabel = {
+        var taskLabel = UILabel()
+        taskLabel.text = "Task"
+        taskLabel.textAlignment = .right
+        taskLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return taskLabel
+    }()
 
 //MARK: - functions
     
