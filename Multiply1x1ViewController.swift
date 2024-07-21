@@ -20,6 +20,11 @@ class Multiply1x1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        addSubviews()
+    }
+    
+    func addSubviews() {
+        view.addSubview(titleLabel)
     }
 
 
