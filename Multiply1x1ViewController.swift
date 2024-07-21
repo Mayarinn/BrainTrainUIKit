@@ -8,6 +8,14 @@
 import UIKit
 
 class Multiply1x1ViewController: UIViewController {
+    
+    var titleLabel: UILabel = {
+        var titleLabel = UILabel()
+        titleLabel.text = "Text"
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return titleLabel
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
