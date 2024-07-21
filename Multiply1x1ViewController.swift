@@ -42,6 +42,8 @@ class Multiply1x1ViewController: UIViewController {
         checkButton.setTitle("Check", for: .normal)
         checkButton.layer.cornerRadius = 7
         checkButton.backgroundColor = .systemPurple
+        checkButton.addTarget(self, action: #selector(checkAnswerButtonClicked), for: .touchUpInside)
+        
         checkButton.translatesAutoresizingMaskIntoConstraints = false
             
         return checkButton
@@ -83,6 +85,10 @@ class Multiply1x1ViewController: UIViewController {
             checkButton.widthAnchor.constraint(equalToConstant: 85),
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
+    }
+    
+    @objc func checkAnswerButtonClicked(_ sender: UIButton) {
+        print("Hello")
     }
 
 
