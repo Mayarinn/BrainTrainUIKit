@@ -62,7 +62,10 @@ class Multiply1x1ViewController: UIViewController {
     }
     
     func randomTask() -> String {
-        return "5x7"
+        var a: Int = Int.random(in: 1...9)
+        var b: Int = Int.random(in: 1...9)
+        
+        return "\(a)x\(b)"
     }
     
     func addSubviews() {
