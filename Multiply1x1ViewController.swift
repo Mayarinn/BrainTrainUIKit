@@ -64,6 +64,7 @@ class Multiply1x1ViewController: UIViewController {
     func randomTask() -> String {
         var a: Int = Int.random(in: 1...9)
         var b: Int = Int.random(in: 1...9)
+        correctAnswer = a*b
         
         return "\(a)x\(b)"
     }
