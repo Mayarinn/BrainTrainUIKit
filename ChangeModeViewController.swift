@@ -28,9 +28,17 @@ class ChangeModeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         addSubviews()
+        setConstraints()
     }
     
     func addSubviews() {
         view.addSubview(multiply1x1Button)
+    }
+    
+    func setConstraints() {
+        NSLayoutConstraint.activate([
+            multiply1x1Button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            multiply1x1Button.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
+        ])
     }
 }
