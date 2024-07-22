@@ -17,6 +17,7 @@ class ChangeModeViewController: UIViewController {
         multiply1x1Button.layer.cornerRadius = 7
         multiply1x1Button.backgroundColor = .systemPurple
         multiply1x1Button.setTitleColor(.systemPink, for: .highlighted)
+        multiply1x1Button.addTarget(self, action: #selector(multiply1x1ButtonClicked), for: .touchUpInside)
         multiply1x1Button.translatesAutoresizingMaskIntoConstraints = false
             
         return multiply1x1Button
@@ -41,4 +42,11 @@ class ChangeModeViewController: UIViewController {
             multiply1x1Button.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
         ])
     }
+    
+//MARK: - @objc functions
+    
+    @objc func multiply1x1ButtonClicked(_ sender: UIButton) {
+        print("Hello")
+    }
+    
 }
