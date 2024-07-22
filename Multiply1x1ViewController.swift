@@ -108,7 +108,7 @@ class Multiply1x1ViewController: UIViewController {
         ])
     }
 
-//MARK: - @objc functions
+//MARK: - @objc function
     
     @objc func checkAnswerButtonClicked(_ sender: UIButton) {
         if checkAnswer(userAnswer: answerTextfield.text ?? "") {
