@@ -15,7 +15,7 @@ class Multiply1x1ViewController: UIViewController {
     
     var titleLabel: UILabel = {
         var titleLabel = UILabel()
-        titleLabel.text = "Text"
+        titleLabel.text = ""
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         return titleLabel
@@ -62,8 +62,8 @@ class Multiply1x1ViewController: UIViewController {
     }
     
     func randomTask() -> String {
-        var a: Int = Int.random(in: 1...9)
-        var b: Int = Int.random(in: 1...9)
+        let a: Int = Int.random(in: 1...9)
+        let b: Int = Int.random(in: 1...9)
         correctAnswer = a*b
         
         return "\(a)x\(b)"
@@ -89,6 +89,7 @@ class Multiply1x1ViewController: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 75),
+            titleLabel.heightAnchor.constraint(equalToConstant: 30),
             
             taskLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             taskLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
