@@ -116,6 +116,7 @@ class Multiply1x1ViewController: UIViewController {
         } else {
             titleLabel.text = "Wrong. Try Again"
         }
+        answerTextfield.text = ""
     }
 
 
