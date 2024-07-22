@@ -27,5 +27,10 @@ class ChangeModeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        addSubviews()
+    }
+    
+    func addSubviews() {
+        view.addSubview(multiply1x1Button)
     }
 }
