@@ -71,6 +71,9 @@ class Multiply1x1ViewController: UIViewController {
     
     func checkAnswer(userAnswer: String) -> Bool {
         var ifAnswerCorrect: Bool = false
+        if Int(userAnswer) == correctAnswer {
+            ifAnswerCorrect = true
+        }
         
         return ifAnswerCorrect
     }
