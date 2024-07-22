@@ -69,6 +69,12 @@ class Multiply1x1ViewController: UIViewController {
         return "\(a)x\(b)"
     }
     
+    func checkAnswer(userAnswer: String) -> Bool {
+        var ifAnswerCorrect: Bool = false
+        
+        return ifAnswerCorrect
+    }
+    
     func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
