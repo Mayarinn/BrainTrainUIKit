@@ -113,6 +113,7 @@ class Multiply1x1ViewController: UIViewController {
     @objc func checkAnswerButtonClicked(_ sender: UIButton) {
         if checkAnswer(userAnswer: answerTextfield.text ?? "") {
             titleLabel.text = "Right. Next One"
+            taskLabel.text = randomTask()
         } else {
             titleLabel.text = "Wrong. Try Again"
         }
