@@ -45,7 +45,7 @@ class ChangeModeViewController: UIViewController {
     
 //MARK: - @objc functions
     
-    @objc func multiply1x1ButtonClicked(_ sender: UIButton) {
+    @objc func multiply1x1ButtonClicked() {
         print("Hello")
     }
     
