@@ -97,6 +97,8 @@ class Multiply1x1ViewController: UIViewController {
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
+
+//MARK: - @objc functions
     
     @objc func checkAnswerButtonClicked(_ sender: UIButton) {
         print("Hello")
