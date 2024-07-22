@@ -11,9 +11,11 @@ class Multiply1x1ViewController: UIViewController {
     
 //MARK: - variables
     
+    var correctAnswer: Int = 0
+    
     var titleLabel: UILabel = {
         var titleLabel = UILabel()
-        titleLabel.text = "Text"
+        titleLabel.text = ""
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         return titleLabel
@@ -60,7 +62,20 @@ class Multiply1x1ViewController: UIViewController {
     }
     
     func randomTask() -> String {
-        return "5x7"
+        let a: Int = Int.random(in: 1...9)
+        let b: Int = Int.random(in: 1...9)
+        correctAnswer = a*b
+        
+        return "\(a)x\(b)"
+    }
+    
+    func checkAnswer(userAnswer: String) -> Bool {
+        var ifAnswerCorrect: Bool = false
+        if Int(userAnswer) == correctAnswer {
+            ifAnswerCorrect = true
+        }
+        
+        return ifAnswerCorrect
     }
     
     func addSubviews() {
@@ -74,6 +89,7 @@ class Multiply1x1ViewController: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 75),
+            titleLabel.heightAnchor.constraint(equalToConstant: 30),
             
             taskLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             taskLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
@@ -91,9 +107,17 @@ class Multiply1x1ViewController: UIViewController {
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
+
+//MARK: - @objc functions
     
     @objc func checkAnswerButtonClicked(_ sender: UIButton) {
-        print("Hello")
+        if checkAnswer(userAnswer: answerTextfield.text ?? "") {
+            titleLabel.text = "Right. Next One"
+            taskLabel.text = randomTask()
+        } else {
+            titleLabel.text = "Wrong. Try Again"
+        }
+        answerTextfield.text = ""
     }
 
 
