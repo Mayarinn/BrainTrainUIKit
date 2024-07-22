@@ -110,7 +110,11 @@ class Multiply1x1ViewController: UIViewController {
 //MARK: - @objc functions
     
     @objc func checkAnswerButtonClicked(_ sender: UIButton) {
-        print("Hello")
+        if checkAnswer(userAnswer: answerTextfield.text ?? "") {
+            titleLabel.text = "Right. Next One"
+        } else {
+            titleLabel.text = "Wrong. Try Again"
+        }
     }
 
 
