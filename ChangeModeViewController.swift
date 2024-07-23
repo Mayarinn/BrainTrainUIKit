@@ -11,6 +11,22 @@ class ChangeModeViewController: UIViewController {
     
 //MARK: - variables
     
+    var stackView: UIStackView = {
+        var stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    
+    var multiplicationLabel: UILabel = {
+        var multiplicationLabel = UILabel()
+        multiplicationLabel.text = "Multiplication"
+        
+        return multiplicationLabel
+    }()
+    
     var multiply1x1Button: UIButton = {
         var multiply1x1Button = UIButton()
         multiply1x1Button.setTitle("1x1", for: .normal)
@@ -34,13 +50,16 @@ class ChangeModeViewController: UIViewController {
     }
     
     func addSubviews() {
-        view.addSubview(multiply1x1Button)
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(multiplicationLabel)
+        stackView.addArrangedSubview(multiply1x1Button)
     }
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            multiply1x1Button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            multiply1x1Button.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50)
         ])
     }
     
