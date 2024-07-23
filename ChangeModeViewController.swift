@@ -27,6 +27,7 @@ class ChangeModeViewController: UIViewController {
             
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Change Mode"
         view.backgroundColor = .systemBackground
         addSubviews()
         setConstraints()
@@ -46,7 +47,8 @@ class ChangeModeViewController: UIViewController {
 //MARK: - @objc functions
     
     @objc func multiply1x1ButtonClicked() {
-        print("Hello")
+        let multiply1x1ViewController = Multiply1x1ViewController()
+        navigationController?.pushViewController(multiply1x1ViewController, animated: true)
     }
     
 }

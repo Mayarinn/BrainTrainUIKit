@@ -55,6 +55,7 @@ class Multiply1x1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Multiply 1x1"
         view.backgroundColor = .systemBackground
         taskLabel.text = randomTask()
         addSubviews()
