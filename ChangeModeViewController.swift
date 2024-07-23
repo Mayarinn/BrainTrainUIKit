@@ -11,6 +11,15 @@ class ChangeModeViewController: UIViewController {
     
 //MARK: - variables
     
+    var stackView: UIStackView = {
+        var stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    
     var multiply1x1Button: UIButton = {
         var multiply1x1Button = UIButton()
         multiply1x1Button.setTitle("1x1", for: .normal)
