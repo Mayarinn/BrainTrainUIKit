@@ -51,6 +51,7 @@ class ChangeModeViewController: UIViewController {
     
     func addSubviews() {
         view.addSubview(stackView)
+        stackView.addArrangedSubview(multiplicationLabel)
         stackView.addArrangedSubview(multiply1x1Button)
     }
     
