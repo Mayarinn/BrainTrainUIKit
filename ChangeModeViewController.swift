@@ -20,6 +20,13 @@ class ChangeModeViewController: UIViewController {
         return stackView
     }()
     
+    var multiplicationLabel: UILabel = {
+        var multiplicationLabel = UILabel()
+        multiplicationLabel.text = "Multiplication"
+        
+        return multiplicationLabel
+    }()
+    
     var multiply1x1Button: UIButton = {
         var multiply1x1Button = UIButton()
         multiply1x1Button.setTitle("1x1", for: .normal)
