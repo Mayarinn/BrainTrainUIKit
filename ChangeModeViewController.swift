@@ -27,6 +27,7 @@ class ChangeModeViewController: UIViewController {
             
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Change Mode"
         view.backgroundColor = .systemBackground
         addSubviews()
         setConstraints()
