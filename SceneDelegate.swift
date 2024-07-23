@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let initialViewController = ChangeModeViewController()
-        window.rootViewController = initialViewController
+        window.rootViewController = UINavigationController(rootViewController: initialViewController)
         window.makeKeyAndVisible()
         self.window = window
     }
