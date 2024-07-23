@@ -49,8 +49,9 @@ class ChangeModeViewController: UIViewController {
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            multiply1x1Button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            multiply1x1Button.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50)
         ])
     }
     
