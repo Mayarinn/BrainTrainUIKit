@@ -52,6 +52,15 @@ class ChangeModeViewController: UIViewController {
         return multiply2x1Button
     }()
     
+    var addingLabel: UILabel = {
+        var addingLabel = UILabel()
+        addingLabel.text = "Adding"
+        addingLabel.font = .systemFont(ofSize: 24, weight: .bold)
+        addingLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return addingLabel
+    }()
+    
 //MARK: - functions
             
     override func viewDidLoad() {
