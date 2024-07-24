@@ -40,6 +40,19 @@ class ChangeModeViewController: UIViewController {
         return multiply1x1Button
     }()
     
+    var multiply2x1Button: UIButton = {
+        var multiply2x1Button = UIButton()
+        multiply2x1Button.setTitle("2x1", for: .normal)
+        multiply2x1Button.layer.cornerRadius = 7
+        multiply2x1Button.backgroundColor = .systemPurple
+        multiply2x1Button.setTitleColor(.systemPink, for: .highlighted)
+        multiply2x1Button.addTarget(self, action: #selector(multiply2x1ButtonClicked), for: .touchUpInside)
+        
+        multiply2x1Button.translatesAutoresizingMaskIntoConstraints = false
+            
+        return multiply2x1Button
+    }()
+    
 //MARK: - functions
             
     override func viewDidLoad() {
@@ -54,13 +67,17 @@ class ChangeModeViewController: UIViewController {
         view.addSubview(stackView)
         stackView.addArrangedSubview(multiplicationLabel)
         stackView.addArrangedSubview(multiply1x1Button)
+        stackView.addArrangedSubview(multiply2x1Button)
     }
     
     func setConstraints() {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50)
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+            
+            multiply1x1Button.heightAnchor.constraint(equalToConstant: 30),
+            multiply2x1Button.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
@@ -72,4 +89,8 @@ class ChangeModeViewController: UIViewController {
         navigationController?.pushViewController(multiply1x1ViewController, animated: true)
     }
     
+    @objc func multiply2x1ButtonClicked() {
+        let multiply2x1ViewController = Multiply2x1ViewController()
+        navigationController?.pushViewController(multiply2x1ViewController, animated: true)
+    }
 }
