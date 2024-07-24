@@ -5,4 +5,16 @@
 //  Created by Karina Osadchaya on 7/24/24.
 //
 
-import Foundation
+import UIKit
+
+class Multiply2x1ViewController: UIViewController {
+    
+//MARK: - variables
+    
+//MARK: - functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
