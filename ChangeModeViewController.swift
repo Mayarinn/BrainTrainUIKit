@@ -40,6 +40,18 @@ class ChangeModeViewController: UIViewController {
         return multiply1x1Button
     }()
     
+    var multiply2x1Button: UIButton = {
+        var multiply2x1Button = UIButton()
+        multiply2x1Button.setTitle("2x1", for: .normal)
+        multiply2x1Button.layer.cornerRadius = 7
+        multiply2x1Button.backgroundColor = .systemPurple
+        multiply2x1Button.setTitleColor(.systemPink, for: .highlighted)
+        
+        multiply2x1Button.translatesAutoresizingMaskIntoConstraints = false
+            
+        return multiply2x1Button
+    }()
+    
 //MARK: - functions
             
     override func viewDidLoad() {
