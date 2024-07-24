@@ -23,7 +23,7 @@ class ChangeModeViewController: UIViewController {
     var multiplicationLabel: UILabel = {
         var multiplicationLabel = UILabel()
         multiplicationLabel.text = "Multiplication"
-        multiplicationLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        multiplicationLabel.font = .systemFont(ofSize: 24, weight: .bold)
         
         return multiplicationLabel
     }()
@@ -47,10 +47,38 @@ class ChangeModeViewController: UIViewController {
         multiply2x1Button.backgroundColor = .systemPurple
         multiply2x1Button.setTitleColor(.systemPink, for: .highlighted)
         multiply2x1Button.addTarget(self, action: #selector(multiply2x1ButtonClicked), for: .touchUpInside)
-        
         multiply2x1Button.translatesAutoresizingMaskIntoConstraints = false
             
         return multiply2x1Button
+    }()
+    
+    var addingLabel: UILabel = {
+        var addingLabel = UILabel()
+        addingLabel.text = "Adding"
+        addingLabel.font = .systemFont(ofSize: 24, weight: .bold)
+        addingLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return addingLabel
+    }()
+    
+    var adding11Button: UIButton = {
+        var adding11Button = UIButton()
+        adding11Button.setTitle("1+1", for: .normal)
+        adding11Button.layer.cornerRadius = 7
+        adding11Button.backgroundColor = .systemGray3
+        adding11Button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return adding11Button
+    }()
+    
+    var adding21Button: UIButton = {
+        var adding21Button = UIButton()
+        adding21Button.setTitle("2+1", for: .normal)
+        adding21Button.layer.cornerRadius = 7
+        adding21Button.backgroundColor = .systemGray3
+        adding21Button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return adding21Button
     }()
     
 //MARK: - functions
@@ -68,6 +96,9 @@ class ChangeModeViewController: UIViewController {
         stackView.addArrangedSubview(multiplicationLabel)
         stackView.addArrangedSubview(multiply1x1Button)
         stackView.addArrangedSubview(multiply2x1Button)
+        stackView.addArrangedSubview(addingLabel)
+        stackView.addArrangedSubview(adding11Button)
+        stackView.addArrangedSubview(adding21Button)
     }
     
     func setConstraints() {
@@ -76,8 +107,15 @@ class ChangeModeViewController: UIViewController {
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             
+            multiplicationLabel.heightAnchor.constraint(equalToConstant: 30),
+            
             multiply1x1Button.heightAnchor.constraint(equalToConstant: 30),
-            multiply2x1Button.heightAnchor.constraint(equalToConstant: 30)
+            multiply2x1Button.heightAnchor.constraint(equalToConstant: 30),
+            
+            addingLabel.heightAnchor.constraint(equalToConstant: 30),
+            
+            adding11Button.heightAnchor.constraint(equalToConstant: 30),
+            adding21Button.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
