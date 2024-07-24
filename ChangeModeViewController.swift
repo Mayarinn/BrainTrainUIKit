@@ -46,6 +46,7 @@ class ChangeModeViewController: UIViewController {
         multiply2x1Button.layer.cornerRadius = 7
         multiply2x1Button.backgroundColor = .systemPurple
         multiply2x1Button.setTitleColor(.systemPink, for: .highlighted)
+        multiply2x1Button.addTarget(self, action: #selector(multiply2x1ButtonClicked), for: .touchUpInside)
         
         multiply2x1Button.translatesAutoresizingMaskIntoConstraints = false
             
