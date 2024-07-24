@@ -88,4 +88,8 @@ class ChangeModeViewController: UIViewController {
         navigationController?.pushViewController(multiply1x1ViewController, animated: true)
     }
     
+    @objc func multiply2x1ButtonClicked() {
+        let multiply2x1ViewController = Multiply2x1ViewController()
+        navigationController?.pushViewController(multiply2x1ViewController, animated: true)
+    }
 }
