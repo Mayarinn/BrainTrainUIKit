@@ -23,6 +23,7 @@ class ChangeModeViewController: UIViewController {
     var multiplicationLabel: UILabel = {
         var multiplicationLabel = UILabel()
         multiplicationLabel.text = "Multiplication"
+        multiplicationLabel.font = .systemFont(ofSize: 20, weight: .bold)
         
         return multiplicationLabel
     }()
