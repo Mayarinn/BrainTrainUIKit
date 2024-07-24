@@ -64,6 +64,7 @@ class ChangeModeViewController: UIViewController {
         ])
     }
     
+    
 //MARK: - @objc functions
     
     @objc func multiply1x1ButtonClicked() {
