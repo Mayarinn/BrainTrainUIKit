@@ -14,7 +14,7 @@ class ChangeModeViewController: UIViewController {
     var stackView: UIStackView = {
         var stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         return stackView
@@ -23,6 +23,7 @@ class ChangeModeViewController: UIViewController {
     var multiplicationLabel: UILabel = {
         var multiplicationLabel = UILabel()
         multiplicationLabel.text = "Multiplication"
+        multiplicationLabel.font = .systemFont(ofSize: 20, weight: .bold)
         
         return multiplicationLabel
     }()
@@ -58,10 +59,11 @@ class ChangeModeViewController: UIViewController {
     func setConstraints() {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50)
         ])
     }
+    
     
 //MARK: - @objc functions
     
