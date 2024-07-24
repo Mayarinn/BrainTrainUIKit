@@ -85,6 +85,8 @@ class ChangeModeViewController: UIViewController {
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             
+            multiplicationLabel.heightAnchor.constraint(equalToConstant: 30),
+            
             multiply1x1Button.heightAnchor.constraint(equalToConstant: 30),
             multiply2x1Button.heightAnchor.constraint(equalToConstant: 30)
         ])
