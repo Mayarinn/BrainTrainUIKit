@@ -61,6 +61,16 @@ class ChangeModeViewController: UIViewController {
         return addingLabel
     }()
     
+    var adding11Button: UIButton = {
+        var adding11Button = UIButton()
+        adding11Button.setTitle("1+1", for: .normal)
+        adding11Button.layer.cornerRadius = 7
+        adding11Button.backgroundColor = .systemGray3
+        adding11Button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return adding11Button
+    }()
+    
 //MARK: - functions
             
     override func viewDidLoad() {
