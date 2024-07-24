@@ -23,7 +23,7 @@ class ChangeModeViewController: UIViewController {
     var multiplicationLabel: UILabel = {
         var multiplicationLabel = UILabel()
         multiplicationLabel.text = "Multiplication"
-        multiplicationLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        multiplicationLabel.font = .systemFont(ofSize: 24, weight: .bold)
         
         return multiplicationLabel
     }()
@@ -47,7 +47,6 @@ class ChangeModeViewController: UIViewController {
         multiply2x1Button.backgroundColor = .systemPurple
         multiply2x1Button.setTitleColor(.systemPink, for: .highlighted)
         multiply2x1Button.addTarget(self, action: #selector(multiply2x1ButtonClicked), for: .touchUpInside)
-        
         multiply2x1Button.translatesAutoresizingMaskIntoConstraints = false
             
         return multiply2x1Button
