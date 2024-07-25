@@ -125,7 +125,9 @@ class ChangeModeViewController: UIViewController {
             addingLabel.heightAnchor.constraint(equalToConstant: 30),
             
             adding11Button.heightAnchor.constraint(equalToConstant: 30),
-            adding21Button.heightAnchor.constraint(equalToConstant: 30)
+            adding21Button.heightAnchor.constraint(equalToConstant: 30),
+            
+            freeModeLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
