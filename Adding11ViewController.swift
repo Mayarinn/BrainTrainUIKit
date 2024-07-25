@@ -15,6 +15,8 @@ class Adding11ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Adding 1+1"
+        view.backgroundColor = .systemBackground
     }
     
 }
