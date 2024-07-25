@@ -81,6 +81,15 @@ class ChangeModeViewController: UIViewController {
         return adding21Button
     }()
     
+    var freeModeLabel: UILabel = {
+        var freeModeLabel = UILabel()
+        freeModeLabel.text = "Free Mode"
+        freeModeLabel.font = .systemFont(ofSize: 24, weight: .bold)
+        freeModeLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return freeModeLabel
+    }()
+    
 //MARK: - functions
             
     override func viewDidLoad() {
