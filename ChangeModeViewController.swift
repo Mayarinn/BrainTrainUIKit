@@ -81,6 +81,25 @@ class ChangeModeViewController: UIViewController {
         return adding21Button
     }()
     
+    var freeModeLabel: UILabel = {
+        var freeModeLabel = UILabel()
+        freeModeLabel.text = "Free Mode"
+        freeModeLabel.font = .systemFont(ofSize: 24, weight: .bold)
+        freeModeLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return freeModeLabel
+    }()
+    
+    var freeModeButton: UIButton = {
+        var freeModeButton = UIButton()
+        freeModeButton.setTitle("Free Mode", for: .normal)
+        freeModeButton.layer.cornerRadius = 7
+        freeModeButton.backgroundColor = .systemGray3
+        freeModeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return freeModeButton
+    }()
+    
 //MARK: - functions
             
     override func viewDidLoad() {
@@ -99,6 +118,8 @@ class ChangeModeViewController: UIViewController {
         stackView.addArrangedSubview(addingLabel)
         stackView.addArrangedSubview(adding11Button)
         stackView.addArrangedSubview(adding21Button)
+        stackView.addArrangedSubview(freeModeLabel)
+        stackView.addArrangedSubview(freeModeButton)
     }
     
     func setConstraints() {
@@ -115,7 +136,11 @@ class ChangeModeViewController: UIViewController {
             addingLabel.heightAnchor.constraint(equalToConstant: 30),
             
             adding11Button.heightAnchor.constraint(equalToConstant: 30),
-            adding21Button.heightAnchor.constraint(equalToConstant: 30)
+            adding21Button.heightAnchor.constraint(equalToConstant: 30),
+            
+            freeModeLabel.heightAnchor.constraint(equalToConstant: 30),
+            
+            freeModeButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
