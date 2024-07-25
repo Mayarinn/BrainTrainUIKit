@@ -143,6 +143,7 @@ class ChangeModeViewController: UIViewController {
             
             multiply1x1Button.heightAnchor.constraint(equalToConstant: 30),
             multiply2x1Button.heightAnchor.constraint(equalToConstant: 30),
+            multiply2x2Button.heightAnchor.constraint(equalToConstant: 30),
             
             addingLabel.heightAnchor.constraint(equalToConstant: 30),
             
