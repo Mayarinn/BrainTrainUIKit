@@ -119,6 +119,7 @@ class ChangeModeViewController: UIViewController {
         stackView.addArrangedSubview(adding11Button)
         stackView.addArrangedSubview(adding21Button)
         stackView.addArrangedSubview(freeModeLabel)
+        stackView.addArrangedSubview(freeModeButton)
     }
     
     func setConstraints() {
