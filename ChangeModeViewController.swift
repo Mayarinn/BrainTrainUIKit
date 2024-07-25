@@ -91,6 +91,16 @@ class ChangeModeViewController: UIViewController {
         return adding21Button
     }()
     
+    var adding22Button: UIButton = {
+        var adding22Button = UIButton()
+        adding22Button.setTitle("2+2", for: .normal)
+        adding22Button.layer.cornerRadius = 7
+        adding22Button.backgroundColor = .systemGray3
+        adding22Button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return adding22Button
+    }()
+    
     var freeModeLabel: UILabel = {
         var freeModeLabel = UILabel()
         freeModeLabel.text = "Free Mode"
