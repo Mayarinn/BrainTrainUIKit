@@ -180,4 +180,9 @@ class ChangeModeViewController: UIViewController {
         let multiply2x1ViewController = Multiply2x1ViewController()
         navigationController?.pushViewController(multiply2x1ViewController, animated: true)
     }
+    
+    @objc func adding11ButtonClicked() {
+        let adding11ViewController = Adding11ViewController()
+        navigationController?.pushViewController(adding11ViewController, animated: true)
+    }
 }
