@@ -125,6 +125,7 @@ class ChangeModeViewController: UIViewController {
         stackView.addArrangedSubview(multiplicationLabel)
         stackView.addArrangedSubview(multiply1x1Button)
         stackView.addArrangedSubview(multiply2x1Button)
+        stackView.addArrangedSubview(multiply2x2Button)
         stackView.addArrangedSubview(addingLabel)
         stackView.addArrangedSubview(adding11Button)
         stackView.addArrangedSubview(adding21Button)
