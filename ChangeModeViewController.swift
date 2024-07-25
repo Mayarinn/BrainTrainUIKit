@@ -75,7 +75,9 @@ class ChangeModeViewController: UIViewController {
         var adding11Button = UIButton()
         adding11Button.setTitle("1+1", for: .normal)
         adding11Button.layer.cornerRadius = 7
-        adding11Button.backgroundColor = .systemGray3
+        adding11Button.backgroundColor = .systemPurple
+        adding11Button.setTitleColor(.systemPink, for: .highlighted)
+        adding11Button.addTarget(self, action: #selector(adding11ButtonClicked), for: .touchUpInside)
         adding11Button.translatesAutoresizingMaskIntoConstraints = false
         
         return adding11Button
@@ -179,5 +181,10 @@ class ChangeModeViewController: UIViewController {
     @objc func multiply2x1ButtonClicked() {
         let multiply2x1ViewController = Multiply2x1ViewController()
         navigationController?.pushViewController(multiply2x1ViewController, animated: true)
+    }
+    
+    @objc func adding11ButtonClicked() {
+        let adding11ViewController = Adding11ViewController()
+        navigationController?.pushViewController(adding11ViewController, animated: true)
     }
 }

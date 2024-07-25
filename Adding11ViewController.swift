@@ -1,13 +1,13 @@
 //
-//  Multiply2x1ViewController.swift
+//  Adding11ViewController.swift
 //  BrainTrainUIKit
 //
-//  Created by Karina Osadchaya on 7/24/24.
+//  Created by Karina Osadchaya on 7/25/24.
 //
 
 import UIKit
 
-class Multiply2x1ViewController: UIViewController {
+class Adding11ViewController: UIViewController {
     
 //MARK: - variables
     
@@ -15,8 +15,8 @@ class Multiply2x1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Adding 1+1"
         view.backgroundColor = .systemBackground
-        title = "Multiply 2x1"
     }
     
 }
