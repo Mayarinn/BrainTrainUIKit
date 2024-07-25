@@ -52,6 +52,16 @@ class ChangeModeViewController: UIViewController {
         return multiply2x1Button
     }()
     
+    var multiply2x2Button: UIButton = {
+        var multiply2x2Button = UIButton()
+        multiply2x2Button.setTitle("2x2", for: .normal)
+        multiply2x2Button.layer.cornerRadius = 7
+        multiply2x2Button.backgroundColor = .systemGray3
+        multiply2x2Button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return multiply2x2Button
+    }()
+    
     var addingLabel: UILabel = {
         var addingLabel = UILabel()
         addingLabel.text = "Adding"
@@ -79,6 +89,16 @@ class ChangeModeViewController: UIViewController {
         adding21Button.translatesAutoresizingMaskIntoConstraints = false
         
         return adding21Button
+    }()
+    
+    var adding22Button: UIButton = {
+        var adding22Button = UIButton()
+        adding22Button.setTitle("2+2", for: .normal)
+        adding22Button.layer.cornerRadius = 7
+        adding22Button.backgroundColor = .systemGray3
+        adding22Button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return adding22Button
     }()
     
     var freeModeLabel: UILabel = {
@@ -115,9 +135,11 @@ class ChangeModeViewController: UIViewController {
         stackView.addArrangedSubview(multiplicationLabel)
         stackView.addArrangedSubview(multiply1x1Button)
         stackView.addArrangedSubview(multiply2x1Button)
+        stackView.addArrangedSubview(multiply2x2Button)
         stackView.addArrangedSubview(addingLabel)
         stackView.addArrangedSubview(adding11Button)
         stackView.addArrangedSubview(adding21Button)
+        stackView.addArrangedSubview(adding22Button)
         stackView.addArrangedSubview(freeModeLabel)
         stackView.addArrangedSubview(freeModeButton)
     }
@@ -132,11 +154,13 @@ class ChangeModeViewController: UIViewController {
             
             multiply1x1Button.heightAnchor.constraint(equalToConstant: 30),
             multiply2x1Button.heightAnchor.constraint(equalToConstant: 30),
+            multiply2x2Button.heightAnchor.constraint(equalToConstant: 30),
             
             addingLabel.heightAnchor.constraint(equalToConstant: 30),
             
             adding11Button.heightAnchor.constraint(equalToConstant: 30),
             adding21Button.heightAnchor.constraint(equalToConstant: 30),
+            adding22Button.heightAnchor.constraint(equalToConstant: 30),
             
             freeModeLabel.heightAnchor.constraint(equalToConstant: 30),
             
