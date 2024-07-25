@@ -75,7 +75,8 @@ class ChangeModeViewController: UIViewController {
         var adding11Button = UIButton()
         adding11Button.setTitle("1+1", for: .normal)
         adding11Button.layer.cornerRadius = 7
-        adding11Button.backgroundColor = .systemGray3
+        adding11Button.backgroundColor = .systemPurple
+        adding11Button.setTitleColor(.systemPink, for: .highlighted)
         adding11Button.addTarget(self, action: #selector(adding11ButtonClicked), for: .touchUpInside)
         adding11Button.translatesAutoresizingMaskIntoConstraints = false
         
