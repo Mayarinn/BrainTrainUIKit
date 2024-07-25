@@ -52,6 +52,16 @@ class ChangeModeViewController: UIViewController {
         return multiply2x1Button
     }()
     
+    var multiply2x2Button: UIButton = {
+        var multiply2x2Button = UIButton()
+        multiply2x2Button.setTitle("2x2", for: .normal)
+        multiply2x2Button.layer.cornerRadius = 7
+        multiply2x2Button.backgroundColor = .systemGray3
+        multiply2x2Button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return multiply2x2Button
+    }()
+    
     var addingLabel: UILabel = {
         var addingLabel = UILabel()
         addingLabel.text = "Adding"
