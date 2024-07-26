@@ -30,7 +30,7 @@ class Adding11ViewController: UIViewController {
     }
     
     func addSubviews() {
-        
+        view.addSubview(titleLabel)
     }
     
     func setConstraints() {
