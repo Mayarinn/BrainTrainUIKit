@@ -60,6 +60,15 @@ class Adding11ViewController: UIViewController {
         setConstraints()
     }
     
+    func randomTask() -> String {
+        let a, b: Int
+        a = Int.random(in: 1...9)
+        b = Int.random(in: 1...9)
+        correctAnswer = a + b
+        
+        return "\(a) + \(b)"
+    }
+    
     func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
