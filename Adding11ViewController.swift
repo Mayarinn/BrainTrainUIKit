@@ -109,4 +109,16 @@ class Adding11ViewController: UIViewController {
         return ifAnswerCorrect
     }
     
+//MARK: - objc functions
+    
+    @objc func checkButtonClicked() {
+        if checkAnswer(userAnswer: answerTextfield.text ?? "") {
+            titleLabel.text = "Right. Next One"
+            taskLabel.text = randomTask()
+        } else {
+            titleLabel.text = "Wrong. Try Again"
+        }
+        answerTextfield.text = ""
+    }
+    
 }
