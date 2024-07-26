@@ -100,4 +100,13 @@ class Adding11ViewController: UIViewController {
         return "\(a) + \(b)"
     }
     
+    func checkAnswer(userAnswer: String) -> Bool {
+        var ifAnswerCorrect: Bool = false
+        if Int(userAnswer) == correctAnswer {
+            ifAnswerCorrect = true
+        }
+        
+        return ifAnswerCorrect
+    }
+    
 }
