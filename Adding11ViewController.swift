@@ -39,6 +39,7 @@ class Adding11ViewController: UIViewController {
     
     func addSubviews() {
         view.addSubview(titleLabel)
+        view.addSubview(taskLabel)
     }
     
     func setConstraints() {
