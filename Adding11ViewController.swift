@@ -18,9 +18,14 @@ class Adding11ViewController: UIViewController {
         title = "Adding 1+1"
         view.backgroundColor = .systemBackground
         addSubviews()
+        setConstraints()
     }
     
     func addSubviews() {
+        
+    }
+    
+    func setConstraints() {
         
     }
     
