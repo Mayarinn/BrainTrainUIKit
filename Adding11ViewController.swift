@@ -46,7 +46,12 @@ class Adding11ViewController: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 75),
-            titleLabel.heightAnchor.constraint(equalToConstant: 30)
+            titleLabel.heightAnchor.constraint(equalToConstant: 30),
+            
+            taskLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            taskLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
+            //width
+            taskLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
