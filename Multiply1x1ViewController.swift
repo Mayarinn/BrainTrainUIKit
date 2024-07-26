@@ -67,7 +67,7 @@ class Multiply1x1ViewController: UIViewController {
         let b: Int = Int.random(in: 1...9)
         correctAnswer = a*b
         
-        return "\(a)x\(b)"
+        return "\(a) x \(b)"
     }
     
     func checkAnswer(userAnswer: String) -> Bool {
