@@ -62,6 +62,7 @@ class Adding11ViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
         view.addSubview(answerTextfield)
+        view.addSubview(checkButton)
     }
     
     func setConstraints() {
