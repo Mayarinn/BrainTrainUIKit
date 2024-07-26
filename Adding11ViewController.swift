@@ -44,6 +44,7 @@ class Adding11ViewController: UIViewController {
         checkButton.layer.cornerRadius = 7
         checkButton.backgroundColor = .systemPurple
         checkButton.setTitleColor(.systemPink, for: .highlighted)
+        checkButton.addTarget(self, action: #selector(checkButtonClicked), for: .touchUpInside)
         
         checkButton.translatesAutoresizingMaskIntoConstraints = false
         
