@@ -11,6 +11,8 @@ class Adding11ViewController: UIViewController {
     
 //MARK: - variables
     
+    var correctAnswer: Int = 0
+    
     var titleLabel: UILabel = {
         var titleLabel = UILabel()
         titleLabel.text = ""
@@ -42,6 +44,7 @@ class Adding11ViewController: UIViewController {
         checkButton.layer.cornerRadius = 7
         checkButton.backgroundColor = .systemPurple
         checkButton.setTitleColor(.systemPink, for: .highlighted)
+        checkButton.addTarget(self, action: #selector(checkButtonClicked), for: .touchUpInside)
         
         checkButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -54,6 +57,7 @@ class Adding11ViewController: UIViewController {
         super.viewDidLoad()
         title = "Adding 1+1"
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
     }
@@ -86,6 +90,36 @@ class Adding11ViewController: UIViewController {
             checkButton.widthAnchor.constraint(equalToConstant: 85),
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
+    }
+    
+    func randomTask() -> String {
+        let a, b: Int
+        a = Int.random(in: 1...9)
+        b = Int.random(in: 1...9)
+        correctAnswer = a + b
+        
+        return "\(a) + \(b)"
+    }
+    
+    func checkAnswer(userAnswer: String) -> Bool {
+        var ifAnswerCorrect: Bool = false
+        if Int(userAnswer) == correctAnswer {
+            ifAnswerCorrect = true
+        }
+        
+        return ifAnswerCorrect
+    }
+    
+//MARK: - objc functions
+    
+    @objc func checkButtonClicked() {
+        if checkAnswer(userAnswer: answerTextfield.text ?? "") {
+            titleLabel.text = "Right. Next One"
+            taskLabel.text = randomTask()
+        } else {
+            titleLabel.text = "Wrong. Try Again"
+        }
+        answerTextfield.text = ""
     }
     
 }
