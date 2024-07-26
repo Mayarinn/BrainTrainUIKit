@@ -56,6 +56,7 @@ class Adding11ViewController: UIViewController {
         super.viewDidLoad()
         title = "Adding 1+1"
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
     }
