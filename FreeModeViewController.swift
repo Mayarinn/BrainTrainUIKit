@@ -19,6 +19,14 @@ class FreeModeViewController: UIViewController {
         return titleLabel
     }()
     
+    var taskLabel: UILabel = {
+        var taskLabel = UILabel()
+        taskLabel.textAlignment = .right
+        taskLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return taskLabel
+    }()
+    
 //MARK: - functions
         
     override func viewDidLoad() {
