@@ -11,6 +11,14 @@ class FreeModeViewController: UIViewController {
 
 //MARK: - variables
     
+    var titleLabel: UILabel = {
+        var titleLabel = UILabel()
+        titleLabel.text = ""
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+        return titleLabel
+    }()
+    
 //MARK: - functions
         
     override func viewDidLoad() {
