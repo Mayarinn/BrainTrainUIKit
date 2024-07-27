@@ -18,9 +18,14 @@ class FreeModeViewController: UIViewController {
         title = "Free Mode"
         view.backgroundColor = .systemBackground
         addSubviews()
+        setConstraints()
     }
     
     func addSubviews() {
+        
+    }
+    
+    func setConstraints() {
         
     }
 }
