@@ -5,4 +5,16 @@
 //  Created by Karina Osadchaya on 7/27/24.
 //
 
-import Foundation
+import UIKit
+
+class FreeModeViewController: UIViewController {
+
+//MARK: - variables
+    
+//MARK: - functions
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
