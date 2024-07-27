@@ -117,6 +117,7 @@ class ChangeModeViewController: UIViewController {
         freeModeButton.setTitle("Free Mode", for: .normal)
         freeModeButton.layer.cornerRadius = 7
         freeModeButton.backgroundColor = .systemGray3
+        freeModeButton.addTarget(self, action: #selector(freeModeButtonClicked), for: .touchUpInside)
         freeModeButton.translatesAutoresizingMaskIntoConstraints = false
         
         return freeModeButton
