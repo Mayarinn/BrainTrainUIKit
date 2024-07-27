@@ -15,6 +15,8 @@ class FreeModeViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Free Mode"
+        view.backgroundColor = .systemBackground
     }
     
 }
