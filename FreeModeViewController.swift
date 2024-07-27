@@ -17,6 +17,10 @@ class FreeModeViewController: UIViewController {
         super.viewDidLoad()
         title = "Free Mode"
         view.backgroundColor = .systemBackground
+        addSubviews()
     }
     
+    func addSubviews() {
+        
+    }
 }
