@@ -61,6 +61,7 @@ class FreeModeViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
         view.addSubview(answerTextfield)
+        view.addSubview(checkButton)
     }
     
     func setConstraints() {
