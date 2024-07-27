@@ -30,7 +30,7 @@ class FreeModeViewController: UIViewController {
     }
     
     func addSubviews() {
-        
+        view.addSubview(titleLabel)
     }
     
     func setConstraints() {
