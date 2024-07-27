@@ -27,6 +27,15 @@ class FreeModeViewController: UIViewController {
         return taskLabel
     }()
     
+    var answerTextfield: UITextField = {
+        var answerTextfield = UITextField()
+        answerTextfield.placeholder = "Answer"
+        answerTextfield.borderStyle = .roundedRect
+        answerTextfield.translatesAutoresizingMaskIntoConstraints = false
+        
+        return answerTextfield
+    }()
+    
 //MARK: - functions
         
     override func viewDidLoad() {
