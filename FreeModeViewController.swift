@@ -39,6 +39,7 @@ class FreeModeViewController: UIViewController {
     
     func addSubviews() {
         view.addSubview(titleLabel)
+        view.addSubview(taskLabel)
     }
     
     func setConstraints() {
