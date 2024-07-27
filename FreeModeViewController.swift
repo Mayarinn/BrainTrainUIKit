@@ -36,6 +36,17 @@ class FreeModeViewController: UIViewController {
         return answerTextfield
     }()
     
+    var checkButton: UIButton = {
+        var checkButton = UIButton()
+        checkButton.setTitle("Check", for: .normal)
+        checkButton.layer.cornerRadius = 7
+        checkButton.backgroundColor = .systemPurple
+        checkButton.setTitleColor(.systemPink, for: .highlighted)
+        checkButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return checkButton
+    }()
+    
 //MARK: - functions
         
     override func viewDidLoad() {
