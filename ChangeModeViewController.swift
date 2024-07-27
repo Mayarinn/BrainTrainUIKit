@@ -187,4 +187,9 @@ class ChangeModeViewController: UIViewController {
         let adding11ViewController = Adding11ViewController()
         navigationController?.pushViewController(adding11ViewController, animated: true)
     }
+    
+    @objc func freeModeButtonClicked() {
+        let freeModeViewController = FreeModeViewController()
+        navigationController?.pushViewController(freeModeViewController, animated: true)
+    }
 }
