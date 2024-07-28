@@ -56,6 +56,7 @@ class Multiply2x1ViewController: UIViewController {
         super.viewDidLoad()
         title = "Multiply 2x1"
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
     }
