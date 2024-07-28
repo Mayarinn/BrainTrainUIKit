@@ -15,8 +15,13 @@ class Multiply2x1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         title = "Multiply 2x1"
+        view.backgroundColor = .systemBackground
+        addSubviews()
+    }
+    
+    func addSubviews() {
+        
     }
     
 }
