@@ -60,6 +60,15 @@ class Multiply2x1ViewController: UIViewController {
         setConstraints()
     }
     
+    func randomTask() -> String {
+        let a, b: Int
+        a = Int.random(in: 10...99)
+        b = Int.random(in: 1...9)
+        correctAnswer = a * b
+        
+        return "\(a) x \(b)"
+    }
+    
     func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
