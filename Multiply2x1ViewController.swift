@@ -11,6 +11,8 @@ class Multiply2x1ViewController: UIViewController {
     
 //MARK: - variables
     
+    var correctAnswer: Int = 0
+    
     var titleLabel: UILabel = {
         var titleLabel = UILabel()
         titleLabel.text = ""
@@ -54,8 +56,18 @@ class Multiply2x1ViewController: UIViewController {
         super.viewDidLoad()
         title = "Multiply 2x1"
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
+    }
+    
+    func randomTask() -> String {
+        let a, b: Int
+        a = Int.random(in: 10...99)
+        b = Int.random(in: 1...9)
+        correctAnswer = a * b
+        
+        return "\(a) x \(b)"
     }
     
     func addSubviews() {
