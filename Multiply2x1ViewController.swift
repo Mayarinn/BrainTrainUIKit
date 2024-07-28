@@ -62,6 +62,7 @@ class Multiply2x1ViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
         view.addSubview(answerTextfield)
+        view.addSubview(checkButton)
     }
     
     func setConstraints() {
