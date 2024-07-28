@@ -34,7 +34,11 @@ class Multiply2x1ViewController: UIViewController {
     }
     
     func setConstraints() {
-        
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 75),
+            titleLabel.heightAnchor.constraint(equalToConstant: 30)
+        ])
     }
     
 }
