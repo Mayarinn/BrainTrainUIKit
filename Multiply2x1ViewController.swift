@@ -79,7 +79,12 @@ class Multiply2x1ViewController: UIViewController {
             answerTextfield.leadingAnchor.constraint(equalTo: taskLabel.trailingAnchor, constant: 10),
             answerTextfield.topAnchor.constraint(equalTo: taskLabel.topAnchor),
             answerTextfield.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
-            answerTextfield.heightAnchor.constraint(equalTo: taskLabel.heightAnchor)
+            answerTextfield.heightAnchor.constraint(equalTo: taskLabel.heightAnchor),
+            
+            checkButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            checkButton.topAnchor.constraint(equalTo: taskLabel.bottomAnchor, constant: 35),
+            checkButton.widthAnchor.constraint(equalToConstant: 85),
+            checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
