@@ -18,9 +18,14 @@ class Multiply2x1ViewController: UIViewController {
         title = "Multiply 2x1"
         view.backgroundColor = .systemBackground
         addSubviews()
+        setConstraints()
     }
     
     func addSubviews() {
+        
+    }
+    
+    func setConstraints() {
         
     }
     
