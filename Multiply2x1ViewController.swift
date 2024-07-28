@@ -30,7 +30,7 @@ class Multiply2x1ViewController: UIViewController {
     }
     
     func addSubviews() {
-        
+        view.addSubview(titleLabel)
     }
     
     func setConstraints() {
