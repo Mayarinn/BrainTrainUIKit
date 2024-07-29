@@ -76,6 +76,15 @@ class FreeModeViewController: UIViewController {
         return task
     }
     
+    func checkAnswer(userAnswer: String) -> Bool {
+        var ifAnswerCorrect: Bool = false
+        if Int(userAnswer) == correctAnswer {
+            ifAnswerCorrect = true
+        }
+        
+        return ifAnswerCorrect
+    }
+    
     func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
