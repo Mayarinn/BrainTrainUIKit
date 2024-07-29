@@ -59,6 +59,22 @@ class FreeModeViewController: UIViewController {
         setConstraints()
     }
     
+    func randomTask() -> String {
+        let mode: Int = Int.random(in: 0...1) // 0 for multiplication mode, 1 for adding
+        let a = Int.random(in: 1...99)
+        let b = Int.random(in: 1...99)
+        var task: String
+        if mode == 0 {
+            correctAnswer = a * b
+            task = "\(a) x \(b)"
+        } else {
+            correctAnswer = a + b
+            task = "\(a) + \(b)"
+        }
+            
+        return task
+    }
+    
     func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(taskLabel)
