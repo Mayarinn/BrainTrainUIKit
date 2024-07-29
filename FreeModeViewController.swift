@@ -11,6 +11,8 @@ class FreeModeViewController: UIViewController {
 
 //MARK: - variables
     
+    var correctAnswer: Int = 0
+    
     var titleLabel: UILabel = {
         var titleLabel = UILabel()
         titleLabel.text = ""
