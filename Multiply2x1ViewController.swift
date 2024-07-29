@@ -44,6 +44,7 @@ class Multiply2x1ViewController: UIViewController {
         checkButton.layer.cornerRadius = 7
         checkButton.backgroundColor = .systemPurple
         checkButton.setTitleColor(.systemPink, for: .highlighted)
+        checkButton.addTarget(self, action: #selector(checkButtonClicked), for: .touchUpInside)
         
         checkButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -68,6 +69,15 @@ class Multiply2x1ViewController: UIViewController {
         correctAnswer = a * b
         
         return "\(a) x \(b)"
+    }
+    
+    func checkAnswer(userAnswer: String) -> Bool {
+        var ifAnswerCorrect: Bool = false
+        if Int(userAnswer) == correctAnswer {
+            ifAnswerCorrect = true
+        }
+        
+        return ifAnswerCorrect
     }
     
     func addSubviews() {
@@ -98,6 +108,19 @@ class Multiply2x1ViewController: UIViewController {
             checkButton.widthAnchor.constraint(equalToConstant: 85),
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
+    }
+    
+//MARK: - @objc functions
+        
+    @objc func checkButtonClicked() {
+        if checkAnswer(userAnswer: answerTextfield.text ?? "") {
+            titleLabel.text = "Right. Next One"
+            taskLabel.text = randomTask()
+            answerTextfield.text = ""
+        } else {
+            titleLabel.text = "Wrong. Try Again"
+            answerTextfield.text = ""
+        }
     }
     
 }
