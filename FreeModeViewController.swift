@@ -11,6 +11,8 @@ class FreeModeViewController: UIViewController {
 
 //MARK: - variables
     
+    var correctAnswer: Int = 0
+    
     var titleLabel: UILabel = {
         var titleLabel = UILabel()
         titleLabel.text = ""
@@ -42,6 +44,7 @@ class FreeModeViewController: UIViewController {
         checkButton.layer.cornerRadius = 7
         checkButton.backgroundColor = .systemPurple
         checkButton.setTitleColor(.systemPink, for: .highlighted)
+        checkButton.addTarget(self, action: #selector(checkButtonClicked), for: .touchUpInside)
         checkButton.translatesAutoresizingMaskIntoConstraints = false
         
         return checkButton
@@ -53,8 +56,34 @@ class FreeModeViewController: UIViewController {
         super.viewDidLoad()
         title = "Free Mode"
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
+    }
+    
+    func randomTask() -> String {
+        let mode: Int = Int.random(in: 0...1) // 0 for multiplication mode, 1 for adding
+        let a = Int.random(in: 1...99)
+        let b = Int.random(in: 1...99)
+        var task: String
+        if mode == 0 {
+            correctAnswer = a * b
+            task = "\(a) x \(b)"
+        } else {
+            correctAnswer = a + b
+            task = "\(a) + \(b)"
+        }
+            
+        return task
+    }
+    
+    func checkAnswer(userAnswer: String) -> Bool {
+        var ifAnswerCorrect: Bool = false
+        if Int(userAnswer) == correctAnswer {
+            ifAnswerCorrect = true
+        }
+        
+        return ifAnswerCorrect
     }
     
     func addSubviews() {
@@ -86,4 +115,17 @@ class FreeModeViewController: UIViewController {
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
+    
+//MARK: - objc functions
+    
+    @objc func checkButtonClicked() {
+        if checkAnswer(userAnswer: answerTextfield.text ?? "") {
+            titleLabel.text = "Right. Next One"
+            taskLabel.text = randomTask()
+        } else {
+            titleLabel.text = "Wrong. Try Again"
+        }
+        answerTextfield.text = ""
+    }
+    
 }

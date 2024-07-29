@@ -116,11 +116,10 @@ class Multiply2x1ViewController: UIViewController {
         if checkAnswer(userAnswer: answerTextfield.text ?? "") {
             titleLabel.text = "Right. Next One"
             taskLabel.text = randomTask()
-            answerTextfield.text = ""
         } else {
             titleLabel.text = "Wrong. Try Again"
-            answerTextfield.text = ""
         }
+        answerTextfield.text = ""
     }
     
 }
