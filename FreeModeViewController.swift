@@ -114,4 +114,17 @@ class FreeModeViewController: UIViewController {
             checkButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
+    
+//MARK: - objc functions
+    
+    @objc func checkButtonClicked() {
+        if checkAnswer(userAnswer: answerTextfield.text ?? "") {
+            titleLabel.text = "Right. Next One"
+            taskLabel.text = randomTask()
+        } else {
+            titleLabel.text = "Wrong. Try Again"
+        }
+        answerTextfield.text = ""
+    }
+    
 }
