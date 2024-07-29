@@ -55,6 +55,7 @@ class FreeModeViewController: UIViewController {
         super.viewDidLoad()
         title = "Free Mode"
         view.backgroundColor = .systemBackground
+        taskLabel.text = randomTask()
         addSubviews()
         setConstraints()
     }
